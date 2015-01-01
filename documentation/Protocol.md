@@ -58,6 +58,14 @@ Takes two parameters - the X and Y coordinates.
 
 Takes two parameters - the X and Y coordinates.
 
+* 0x87 - Draw line
+
+Takes four parameters - x0,y0 and x1,y1
+
+* 0x88 - Erase line
+
+Takes four parameters - x0,y0 and x1,y1
+
 There is also a special "whole frame transfer" sub-protocol.  In this the entire
 frame data is sent as one string of nibble characters.  It is initiated
 by a special nibble character with a different offset to normal marking it
