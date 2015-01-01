@@ -6,6 +6,12 @@ static const uint8_t CMD_SET_BG = 131;
 static const uint8_t CMD_SET_FG = 132;
 static const uint8_t CMD_SET_PIX = 133;
 static const uint8_t CMD_CLR_PIX = 134;
+static const uint8_t CMD_SET_LINE = 135;
+static const uint8_t CMD_CLR_LINE = 136;
+
+void _VirtualLCD::begin() {
+    begin(Serial);
+}
 
 void _VirtualLCD::begin(Stream &s) {
     _ser = &s;
@@ -29,6 +35,18 @@ void _VirtualLCD::clearPixel(uint8_t x, uint8_t y) {
     push(x);
     push(y);
     _ser->write(CMD_CLR_PIX);
+}
+
+void _VirtualLCD::drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, boolean col) {
+    push(x0);
+    push(y0);
+    push(x1);
+    push(y1);
+    if (col) {
+        _ser->write(CMD_SET_LINE);
+    } else {
+        _ser->write(CMD_CLR_LINE);
+    }
 }
 
 void _VirtualLCD::setSize(uint8_t x, uint8_t y) {

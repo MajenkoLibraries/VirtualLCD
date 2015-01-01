@@ -46,6 +46,7 @@ class _VirtualLCD {
         void push(uint8_t v);
 
     public:
+        void begin();
         void begin(Stream &s);
         void setSize(uint8_t x, uint8_t y);
         void sendData(uint8_t *data);
@@ -53,6 +54,7 @@ class _VirtualLCD {
         void setForeground(uint8_t, uint8_t, uint8_t);
         void setPixel(uint8_t x, uint8_t y);
         void clearPixel(uint8_t x, uint8_t y);
+        void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, boolean col = true);
 };
 
 extern _VirtualLCD VirtualLCD;
