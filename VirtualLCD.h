@@ -42,6 +42,8 @@ class _VirtualLCD {
         Stream *_ser;
         uint8_t _width;
         uint8_t _height;
+        void sendByte(uint8_t b, boolean startbit = false);
+        void push(uint8_t v);
 
     public:
         void begin(Stream &s);
@@ -49,6 +51,8 @@ class _VirtualLCD {
         void sendData(uint8_t *data);
         void setBackground(uint8_t, uint8_t, uint8_t);
         void setForeground(uint8_t, uint8_t, uint8_t);
+        void setPixel(uint8_t x, uint8_t y);
+        void clearPixel(uint8_t x, uint8_t y);
 };
 
 extern _VirtualLCD VirtualLCD;
