@@ -8,5 +8,6 @@ Standards-Version: 3.9.4
 
 Package: libvirtuallcd
 Architecture: all
+Provides: VirtualLCD.h
 Description: VirtualLCD library
 
