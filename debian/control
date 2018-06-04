@@ -1,7 +1,8 @@
 Source: libvirtuallcd
-Section: libraries
+Section: main
 Priority: extra
-XBSC-Group: Display
+XBSC-Group: Libraries
+XBSC-SubGroup: Display
 Maintainer: Matt Jenkins <matt@majenko.co.uk>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
