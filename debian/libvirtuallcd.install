@@ -1,6 +1,0 @@
-README.md usr/share/doc/libvirtuallcd/
-VirtualLCD.cpp libraries/Display/VirtualLCD/
-VirtualLCD.h libraries/Display/VirtualLCD/
-documentation/Protocol.md usr/share/doc/libvirtuallcd/documentation
-examples/BouncyLine/BouncyLine.ino libraries/Display/VirtualLCD/examples/BouncyLine
-examples/Snow/Snow.ino libraries/Display/VirtualLCD/examples/Snow
